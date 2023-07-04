@@ -12,7 +12,7 @@ weatherForm.addEventListener('submit', (e) => {
     msgTwo.textContent = ''
     // Fetch API is a JS Client-Side API that runs async. This takes 1 parameter (URL) from which we fetch from.
     // We can use 'then' to handle the output. Which is similar to passing a 'callback function' in nodejs.
-    fetch('http://localhost:3001/weather?address='+location).then((response) => {
+    fetch('/weather?address='+location).then((response) => {
     response.json().then((data) => {
         if (data.error) {
             msgOne.textContent = data.error;
